@@ -18,7 +18,7 @@
                 <li>Email support</li>
                 <li>Help center access</li>
                 </ul>
-                <a href="/" type="button" class="btn btn-lg btn-block btn-outline-primary">Buy this product</a>
+                <a href="{{url_for('payment', id=item.id)}}" type="button" class="btn btn-lg btn-block btn-outline-primary">Buy this product</a>
             </div>
         </div>
     {% endfor %}

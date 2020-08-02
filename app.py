@@ -29,6 +29,12 @@ def about():
     return render_template('about.html')
 
 
+@app.route('/buy/<int:id>')
+def payment(id):
+    item = Item.query.get(id)
+    return f'{item.title} {item.price}'
+
+
 @app.route('/create', methods=['GET', 'POST'])
 def create():
     if request.method == 'POST':
